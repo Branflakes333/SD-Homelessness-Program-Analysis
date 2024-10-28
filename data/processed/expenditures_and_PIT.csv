@@ -1,0 +1,589 @@
+City,Year,Total PEH,Unsheltered PEH,Population,"PEH Per 100,000","Unsheltered Per 100,000",Grantee,Program,Amount,ExpenditureType
+El Cajon,2014,711,191,103230,688.7532694,185.0237334,East County Transitional Living Center,emergency shelter,75000.00 ,Crisis Management
+El Cajon,2014,711,191,103230,688.7532694,185.0237334,East County Transitional Living Center,emergency shelter,75000.00 ,Crisis Management
+El Cajon,2015,321,218,103527,310.0640413,210.5730872,East County Transitional Living Center,emergency shelter,120000.00 ,Crisis Management
+El Cajon,2015,321,218,103527,310.0640413,210.5730872,East County Transitional Living Center,emergency shelter,120000.00 ,Crisis Management
+San Marcos,2015,99,44,94932,104.2851725,46.34896558,North County Lifeline,housing assistance,21600,Prevention
+San Marcos,2015,99,44,94932,104.2851725,46.34896558,211 San Diego,staff and operations,17408,Crisis Management
+El Cajon,2016,453,323,103486,437.7403707,312.1195138,Crisis House,housing navigation services,7699.00 ,Crisis Management
+El Cajon,2016,453,323,103486,437.7403707,312.1195138,East County Transitional Living Center,emergency shelter,100614.00 ,Crisis Management
+El Cajon,2016,453,323,103486,437.7403707,312.1195138,Interfaith Community Services,emergency shelter,7614.00 ,Crisis Management
+El Cajon,2016,453,323,103486,437.7403707,312.1195138,Crisis House,housing navigation services,7699.00 ,Crisis Management
+El Cajon,2016,453,323,103486,437.7403707,312.1195138,East County Transitional Living Center,emergency shelter,100614.00 ,Crisis Management
+El Cajon,2016,453,323,103486,437.7403707,312.1195138,Interfaith Community Services,emergency shelter,7614.00 ,Crisis Management
+San Marcos,2016,170,52,95614,177.7982304,54.38534106,North County Lifeline,housing assistance,27600,Prevention
+San Marcos,2016,170,52,95614,177.7982304,54.38534106,211 San Diego,staff and operations,17408,Crisis Management
+San Marcos,2016,170,52,95614,177.7982304,54.38534106,211 San Diego,staff and operations,5802.67,Crisis Management
+Carlsbad,2017,210,152,115518,181.7898509,131.5812254,Women's Resource Center,emergency shelter,14896,Crisis Management
+Chula Vista,2017,337,229,270819,124.4373548,84.55832124,SBCS CORPORATION,rental assistance,14142.74 ,Prevention
+Chula Vista,2017,337,229,270819,124.4373548,84.55832124,SBCS CORPORATION,rental assistance,12931.10 ,Prevention
+Chula Vista,2017,337,229,270819,124.4373548,84.55832124,SBCS CORPORATION,rental assistance,10285.61 ,Prevention
+Chula Vista,2017,337,229,270819,124.4373548,84.55832124,SBCS CORPORATION,homeless services,276.00 ,Crisis Management
+Chula Vista,2017,337,229,270819,124.4373548,84.55832124,INTERFAITH SHELTER NETWORK,emergency shelter,1971.50 ,Crisis Management
+Chula Vista,2017,337,229,270819,124.4373548,84.55832124,SBCS CORPORATION,motel voucher,1835.85 ,Crisis Management
+Chula Vista,2017,337,229,270819,124.4373548,84.55832124,SBCS CORPORATION,rental assistance,12461.00 ,Prevention
+Chula Vista,2017,337,229,270819,124.4373548,84.55832124,SBCS CORPORATION,rental assistance,9575.31 ,Prevention
+Chula Vista,2017,337,229,270819,124.4373548,84.55832124,SBCS CORPORATION,rental assistance,14142.74 ,Prevention
+Chula Vista,2017,337,229,270819,124.4373548,84.55832124,SBCS CORPORATION,rental assistance,12931.10 ,Prevention
+Chula Vista,2017,337,229,270819,124.4373548,84.55832124,SBCS CORPORATION,rental assistance,10285.61 ,Prevention
+Chula Vista,2017,337,229,270819,124.4373548,84.55832124,SBCS CORPORATION,homeless services,276.00 ,Crisis Management
+Chula Vista,2017,337,229,270819,124.4373548,84.55832124,INTERFAITH SHELTER NETWORK,emergency shelter,1971.50 ,Crisis Management
+Chula Vista,2017,337,229,270819,124.4373548,84.55832124,SBCS CORPORATION,motel voucher,1835.85 ,Crisis Management
+Chula Vista,2017,337,229,270819,124.4373548,84.55832124,SBCS CORPORATION,rental assistance,12461.00 ,Prevention
+Chula Vista,2017,337,229,270819,124.4373548,84.55832124,SBCS CORPORATION,rental assistance,9575.31 ,Prevention
+El Cajon,2017,679,288,103041,658.9609961,279.500393,East County Transitional Living Center,emergency shelter,100000.00 ,Crisis Management
+El Cajon,2017,679,288,103041,658.9609961,279.500393,Interfaith Community Services,emergency shelter,10000.00 ,Crisis Management
+El Cajon,2017,679,288,103041,658.9609961,279.500393,East County Transitional Living Center,emergency shelter,100000.00 ,Crisis Management
+El Cajon,2017,679,288,103041,658.9609961,279.500393,Interfaith Community Services,emergency shelter,10000.00 ,Crisis Management
+Escondido,2017,411,263,151793,270.7634739,173.2622716,Interfaith Community Services,homelessness prevention,192324,Prevention
+Escondido,2017,411,263,151793,270.7634739,173.2622716,Alliance for Regional Solutions,emergency shelter,43000,Crisis Management
+National City,2017,233,201,61272,380.2715759,328.0454367,South Bay Community Services,rental assistance,94073.71,Prevention
+San Diego,2017,4912,2630,1421917,345.4491366,184.9615695,Alpha Project ,emergency shelter,2888176,Crisis Management
+San Diego,2017,4912,2630,1421917,345.4491366,184.9615695,Veterans Village of San Diego,emergency shelter,1893286,Crisis Management
+San Diego,2017,4912,2630,1421917,345.4491366,184.9615695,Father Joe's Village,emergency shelter,1335984,Crisis Management
+San Diego,2017,4912,2630,1421917,345.4491366,184.9615695,Downtown San Diego Partnership,family reunification program,394000.00 ,Diversion
+San Diego,2017,4912,2630,1421917,345.4491366,184.9615695,PATH,transitional housing,717118.00 ,Crisis Management
+San Diego,2017,4912,2630,1421917,345.4491366,184.9615695,PATH,rapid re housing,189000.00 ,Crisis Management
+San Marcos,2017,62,62,96480,64.26202322,64.26202322,Bread of Lift Rescue Mission,emergency shelter,14500,Crisis Management
+San Marcos,2017,62,62,96480,64.26202322,64.26202322,Interfaith Community Services,emergency shelter,8400,Crisis Management
+San Marcos,2017,62,62,96480,64.26202322,64.26202322,Interfaith Community Services,emergency shelter,15000,Crisis Management
+San Marcos,2017,62,62,96480,64.26202322,64.26202322,Operation Hope,emergency shelter,25000,Crisis Management
+San Marcos,2017,62,62,96480,64.26202322,64.26202322,Solutions for Change,housing assistance,126000,Prevention
+San Marcos,2017,62,62,96480,64.26202322,64.26202322,211 San Diego,staff and operations,17408,Crisis Management
+San Marcos,2017,62,62,96480,64.26202322,64.26202322,211 San Diego,staff and operations,5802.67,Crisis Management
+Santee,2017,46,46,57944,79.38699434,79.38699434,Crisis House,homelessness prevention,5000,Prevention
+Santee,2017,46,46,57944,79.38699434,79.38699434,Santee Food Bank,food and nutrition,14470,Crisis Management
+Carlsbad,2018,161,102,115382,139.5364962,88.40200378,Urban Corps,neighborhood revitalization services,99000,Crisis Management
+Carlsbad,2018,161,102,115382,139.5364962,88.40200378,Legal Aid Society,housing assistance,20550,Prevention
+Carlsbad,2018,161,102,115382,139.5364962,88.40200378,Interfaith Community Services,staff and operations,122472,Crisis Management
+Carlsbad,2018,161,102,115382,139.5364962,88.40200378,Interfaith Community Services,housing assistance,20061,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,INTERFAITH SHELTER NETWORK,emergency shelter,2351.52 ,Crisis Management
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,motel voucher,2385.63 ,Crisis Management
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,homeless services,8385.00 ,Crisis Management
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,5127.00 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,44219.26 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,8328.54 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,6427.86 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,3830.00 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,4715.02 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,motel voucher,8750.60 ,Crisis Management
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,homeless services,16825.00 ,Crisis Management
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,3583.00 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,2632.75 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,INTERFAITH SHELTER NETWORK,emergency shelter,4218.84 ,Crisis Management
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,5043.00 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,3286.57 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,INTERFAITH SHELTER NETWORK,emergency shelter,2458.14 ,Crisis Management
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,7335.40 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,5449.60 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,4125.60 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,3206.60 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,3206.60 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,1743.03 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,1677.00 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,motel voucher,16309.26 ,Crisis Management
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,homeless services,14064.00 ,Crisis Management
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,8645.00 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,966.00 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,2610.05 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,4107.36 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,3206.40 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,8248.30 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,7184.28 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,9329.00 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,11546.21 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,11351.06 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,10160.22 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,888.00 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,888.00 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,966.00 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,2562.00 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,5178.00 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,11346.00 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,INTERFAITH SHELTER NETWORK,emergency shelter,2351.52 ,Crisis Management
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,motel voucher,2385.63 ,Crisis Management
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,homeless services,8385.00 ,Crisis Management
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,5127.00 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,44219.26 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,8328.54 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,6427.86 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,3830.00 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,4715.02 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,motel voucher,8750.60 ,Crisis Management
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,homeless services,16825.00 ,Crisis Management
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,3583.00 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,2632.75 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,INTERFAITH SHELTER NETWORK,emergency shelter,4218.84 ,Crisis Management
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,5043.00 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,3286.57 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,INTERFAITH SHELTER NETWORK,emergency shelter,2458.14 ,Crisis Management
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,7335.40 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,5449.60 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,4125.60 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,3206.60 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,3206.60 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,1743.03 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,1677.00 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,motel voucher,16309.26 ,Crisis Management
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,homeless services,14064.00 ,Crisis Management
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,8645.00 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,966.00 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,2610.05 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,4107.36 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,3206.40 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,8248.30 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,7184.28 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,9329.00 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,11546.21 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,11351.06 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,10160.22 ,Prevention
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,888.00 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,888.00 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,966.00 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,2562.00 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rapid re housing,5178.00 ,Diversion
+Chula Vista,2018,321,242,274492,116.9432989,88.16286085,SBCS CORPORATION,rental assistance,11346.00 ,Prevention
+El Cajon,2018,787,298,102708,766.2499513,290.1429295,Interfaith Community Services,emergency shelter,10000.00 ,Crisis Management
+El Cajon,2018,787,298,102708,766.2499513,290.1429295,Interfaith Community Services,emergency shelter,10000.00 ,Crisis Management
+Encinitas,2018,120,79,62709,191.3600919,125.9787271,Community Resource Center,opening doors program,107905,Crisis Management
+Encinitas,2018,120,79,62709,191.3600919,125.9787271,Interfaith Community Services,bridge to housing network,6707,Crisis Management
+Encinitas,2018,120,79,62709,191.3600919,125.9787271,Community Resource Center,homelessness prevention,13407,Prevention
+Encinitas,2018,120,79,62709,191.3600919,125.9787271,Catholic Charities,emergency shelter,6707,Crisis Management
+Escondido,2018,350,241,151625,230.8326463,158.944765,Interfaith Community Services,outreach,132289,Crisis Management
+Escondido,2018,350,241,151625,230.8326463,158.944765,Alliance for Regional Solutions,emergency shelter,45000,Crisis Management
+National City,2018,94,94,61394,153.1094244,153.1094244,South Bay Community Services,rental assistance,94073.71,Prevention
+Poway,2018,9,9,49323,18.24706526,18.24706526,Elderhelp of San Diego,outreach,16000,Crisis Management
+San Diego,2018,5082,2600,1423851,356.9193687,182.6033763,Jewish Family Services,safe parking,488584,Crisis Management
+San Diego,2018,5082,2600,1423851,356.9193687,182.6033763,Mental Health Systems,transitional housing,1426729.26,Crisis Management
+San Diego,2018,5082,2600,1423851,356.9193687,182.6033763,Mental Health Systems Inc.,transitional housing,1426729.26 ,Crisis Management
+San Diego,2018,5082,2600,1423851,356.9193687,182.6033763,Think Dignity,transitional housing,113750.00 ,Crisis Management
+San Diego,2018,5082,2600,1423851,356.9193687,182.6033763,Downtown San Diego Partnership,family reunification program,844000.00 ,Diversion
+San Diego,2018,5082,2600,1423851,356.9193687,182.6033763,PATH,transitional housing,689118.00 ,Crisis Management
+San Diego,2018,5082,2600,1423851,356.9193687,182.6033763,PATH,rapid re housing,239000.00 ,Crisis Management
+San Marcos,2018,46,46,96664,47.58751966,47.58751966,Alliance for Regional Solutions,emergency shelter,66300,Crisis Management
+San Marcos,2018,46,46,96664,47.58751966,47.58751966,211 San Diego,staff and operations,18473,Crisis Management
+San Marcos,2018,46,46,96664,47.58751966,47.58751966,211 San Diego,staff and operations,5802.67,Crisis Management
+Santee,2018,35,35,58081,60.26067044,60.26067044,Crisis House,homelessness prevention,5490,Prevention
+Santee,2018,35,35,58081,60.26067044,60.26067044,Santee Food Bank,food and nutrition,14270,Crisis Management
+Vista,2018,296,122,101638,291.2296582,120.0338456,Alpha Project ,outreach,13607,Crisis Management
+Vista,2018,296,122,101638,291.2296582,120.0338456,Operation Hope,emergency shelter,24740,Crisis Management
+Carlsbad,2019,148,94,114747,128.9794069,81.91935301,Women's Resource Center,homeless services,10000,Crisis Management
+Carlsbad,2019,148,94,114747,128.9794069,81.91935301,Urban Corps,neighborhood revitalization services,17500,Other/Unknown
+Carlsbad,2019,148,94,114747,128.9794069,81.91935301,Urban Corps,neighborhood revitalization services,99000,Crisis Management
+Carlsbad,2019,148,94,114747,128.9794069,81.91935301,Meals on Wheels,homeless services,10000,Crisis Management
+Carlsbad,2019,148,94,114747,128.9794069,81.91935301,Legal Aid Society,housing assistance,22744,Prevention
+Carlsbad,2019,148,94,114747,128.9794069,81.91935301,Interfaith Community Services,staff and operations,122472,Crisis Management
+Carlsbad,2019,148,94,114747,128.9794069,81.91935301,Interfaith Community Services,housing assistance,29936,Prevention
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,INTERFAITH SHELTER NETWORK,emergency shelter,1628.50 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,INTERFAITH SHELTER NETWORK,emergency shelter,1844.18 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rapid re housing,2397.00 ,Diversion
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rapid re housing,2657.00 ,Diversion
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rental assistance,12761.74 ,Prevention
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rental assistance,20868.56 ,Prevention
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rental assistance,17930.50 ,Prevention
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rental assistance,17681.21 ,Prevention
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rental assistance,18030.42 ,Prevention
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rapid re housing,2774.00 ,Diversion
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rental assistance,17046.65 ,Prevention
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rental assistance,17535.70 ,Prevention
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rapid re housing,3183.00 ,Diversion
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rental assistance,19640.18 ,Prevention
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rapid re housing,27441.65 ,Diversion
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,INTERFAITH SHELTER NETWORK,emergency shelter,4742.06 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rapid re housing,6888.37 ,Diversion
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rapid re housing,242.00 ,Diversion
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rental assistance,17006.05 ,Prevention
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,motel voucher,14828.20 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,motel voucher,35171.80 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,INTERFAITH SHELTER NETWORK,emergency shelter,2785.26 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,homeless services,6172.12 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,homeless services,8960.19 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,homeless services,12326.28 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rapid re housing,7850.00 ,Diversion
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rapid re housing,7016.37 ,Diversion
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,homeless services,12091.41 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,COMMUNITY THROUGH HOPE,project h.o.p.e.,3750.00 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,ONE TIME VENDOR,motel voucher,111.30 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rental assistance,15938.00 ,Prevention
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rental assistance,14754.00 ,Prevention
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rental assistance,14493.00 ,Prevention
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rapid re housing,19576.00 ,Diversion
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rental assistance,11302.00 ,Prevention
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,ONE TIME VENDOR,motel voucher,423.16 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,ONE TIME VENDOR,motel voucher,573.85 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,ONE TIME VENDOR,motel voucher,248.45 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,ONE TIME VENDOR,motel voucher,50.00 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,homeless services,6149.00 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,COMMUNITY THROUGH HOPE,project h.o.p.e.,2500.00 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rapid re housing,6250.00 ,Diversion
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rapid re housing,5745.00 ,Diversion
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,ONE TIME VENDOR,motel voucher,560.65 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,ONE TIME VENDOR,motel voucher,560.65 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,INTERFAITH SHELTER NETWORK,emergency shelter,1628.50 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,INTERFAITH SHELTER NETWORK,emergency shelter,1844.18 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rapid re housing,2397.00 ,Diversion
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rapid re housing,2657.00 ,Diversion
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rental assistance,12761.74 ,Prevention
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rental assistance,20868.56 ,Prevention
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rental assistance,17930.50 ,Prevention
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rental assistance,17681.21 ,Prevention
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rental assistance,18030.42 ,Prevention
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rapid re housing,2774.00 ,Diversion
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rental assistance,17046.65 ,Prevention
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rental assistance,17535.70 ,Prevention
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rapid re housing,3183.00 ,Diversion
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rental assistance,19640.18 ,Prevention
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rapid re housing,27441.65 ,Diversion
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,INTERFAITH SHELTER NETWORK,emergency shelter,4742.06 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rapid re housing,6888.37 ,Diversion
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rapid re housing,242.00 ,Diversion
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rental assistance,17006.05 ,Prevention
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,motel voucher,14828.20 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,motel voucher,35171.80 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,INTERFAITH SHELTER NETWORK,emergency shelter,2785.26 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,homeless services,6172.12 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,homeless services,8960.19 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,homeless services,12326.28 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rapid re housing,7850.00 ,Diversion
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rapid re housing,7016.37 ,Diversion
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,homeless services,12091.41 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,COMMUNITY THROUGH HOPE,project h.o.p.e.,3750.00 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,ONE TIME VENDOR,motel voucher,111.30 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rental assistance,15938.00 ,Prevention
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rental assistance,14754.00 ,Prevention
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rental assistance,14493.00 ,Prevention
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rapid re housing,19576.00 ,Diversion
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rental assistance,11302.00 ,Prevention
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,ONE TIME VENDOR,motel voucher,423.16 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,ONE TIME VENDOR,motel voucher,573.85 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,ONE TIME VENDOR,motel voucher,248.45 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,ONE TIME VENDOR,motel voucher,50.00 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,homeless services,6149.00 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,COMMUNITY THROUGH HOPE,project h.o.p.e.,2500.00 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rapid re housing,6250.00 ,Diversion
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,SBCS CORPORATION,rapid re housing,5745.00 ,Diversion
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,ONE TIME VENDOR,motel voucher,560.65 ,Crisis Management
+Chula Vista,2019,313,212,276041,113.3889531,76.80018548,ONE TIME VENDOR,motel voucher,560.65 ,Crisis Management
+El Cajon,2019,784,310,106126,738.7445112,292.1056103,Crisis House,housing assistance,700000.00 ,Crisis Management
+El Cajon,2019,784,310,106126,738.7445112,292.1056103,East County Transitional Living Center,emergency shelter,100000.00 ,Crisis Management
+El Cajon,2019,784,310,106126,738.7445112,292.1056103,Home Start,emergency shelter,664807.00 ,Crisis Management
+El Cajon,2019,784,310,106126,738.7445112,292.1056103,Interfaith Community Services,emergency shelter,9861.85 ,Crisis Management
+El Cajon,2019,784,310,106126,738.7445112,292.1056103,The Salvation Army,family reunification program,10000.00 ,Diversion
+El Cajon,2019,784,310,106126,738.7445112,292.1056103,Crisis House,housing assistance,700000.00 ,Crisis Management
+El Cajon,2019,784,310,106126,738.7445112,292.1056103,East County Transitional Living Center,emergency shelter,100000.00 ,Crisis Management
+El Cajon,2019,784,310,106126,738.7445112,292.1056103,Home Start,emergency shelter,664807.00 ,Crisis Management
+El Cajon,2019,784,310,106126,738.7445112,292.1056103,Interfaith Community Services,emergency shelter,9861.85 ,Crisis Management
+Encinitas,2019,80,47,61988,129.0572369,75.82112667,Community Resource Center,opening doors program,118700,Crisis Management
+Encinitas,2019,80,47,61988,129.0572369,75.82112667,Interfaith Community Services,bridge to housing network,20054,Crisis Management
+Encinitas,2019,80,47,61988,129.0572369,75.82112667,Community Resource Center,homelessness prevention,13607,Prevention
+Escondido,2019,429,264,151038,284.0344814,174.7904501,Interfaith Community Services,staff and operations,185328,Crisis Management
+Escondido,2019,429,264,151038,284.0344814,174.7904501,Interfaith Community Services,outreach,276432,Crisis Management
+Escondido,2019,429,264,151038,284.0344814,174.7904501,Alliance for Regional Solutions,emergency shelter,45000,Crisis Management
+Poway,2019,15,15,48779,30.7509379,30.7509379,Elderhelp of San Diego,outreach,16000,Crisis Management
+Poway,2019,15,15,48779,30.7509379,30.7509379,Interfaith Community Services,emergency shelter,20000,Crisis Management
+San Diego,2019,4870,2283,1386872,352.3757059,164.6150474,Jewish Family Services,safe parking,956291,Crisis Management
+San Diego,2019,4870,2283,1386872,352.3757059,164.6150474,Downtown San Diego Partnershup,family reunification program,844000,Diversion
+San Diego,2019,4870,2283,1386872,352.3757059,164.6150474,Think Dignity,transitional housing,163124,Crisis Management
+San Diego,2019,4870,2283,1386872,352.3757059,164.6150474,Home Start,rapid re housing,454726,Diversion
+San Diego,2019,4870,2283,1386872,352.3757059,164.6150474,PATH,rapid re housing,454726,Diversion
+San Diego,2019,4870,2283,1386872,352.3757059,164.6150474,The Salvation Army,rapid re housing,454726,Diversion
+San Diego,2019,4870,2283,1386872,352.3757059,164.6150474,Alpha Project ,emergency shelter,5317209,Crisis Management
+San Diego,2019,4870,2283,1386872,352.3757059,164.6150474,Veterans Village of San Diego,emergency shelter,3408472,Crisis Management
+San Diego,2019,4870,2283,1386872,352.3757059,164.6150474,Father Joe's Village,emergency shelter,2472491,Crisis Management
+San Diego,2019,4870,2283,1386872,352.3757059,164.6150474,Alpha Project ,emergency shelter,2247713.38,Crisis Management
+San Diego,2019,4870,2283,1386872,352.3757059,164.6150474,Mental Health Systems,transitional housing,720664,Crisis Management
+San Diego,2019,4870,2283,1386872,352.3757059,164.6150474,Home Start,rapid re housing,454726.00 ,Crisis Management
+San Diego,2019,4870,2283,1386872,352.3757059,164.6150474,PATH,rapid re housing,454726.00 ,Crisis Management
+San Diego,2019,4870,2283,1386872,352.3757059,164.6150474,Salvation Army of San Diego,rapid re housing,454726.00 ,Crisis Management
+San Diego,2019,4870,2283,1386872,352.3757059,164.6150474,Mental Health Systems Inc.,transitional housing,419750.00 ,Crisis Management
+San Diego,2019,4870,2283,1386872,352.3757059,164.6150474,Alpha Project for the Homeless,emergency shelter,2247713.38 ,Crisis Management
+San Diego,2019,4870,2283,1386872,352.3757059,164.6150474,Family Health Centers of San Diego Inc.,housing navigation services,1850000.00 ,Crisis Management
+San Diego,2019,4870,2283,1386872,352.3757059,164.6150474,Salvation Army of San Diego,housing assistance,232309.00 ,Prevention
+San Diego,2019,4870,2283,1386872,352.3757059,164.6150474,YMCA,transitional housing,50000.00 ,Crisis Management
+San Diego,2019,4870,2283,1386872,352.3757059,164.6150474,Alpha Project for the Homeless,transitional housing,468245.14 ,Crisis Management
+San Diego,2019,4870,2283,1386872,352.3757059,164.6150474,Alpha Project for the Homeless,transitional housing,936488.00 ,Crisis Management
+San Diego,2019,4870,2283,1386872,352.3757059,164.6150474,Mental Health Systems Inc.,transitional housing,1190828.40 ,Crisis Management
+San Diego,2019,4870,2283,1386872,352.3757059,164.6150474,Think Dignity,transitional housing,163124.00 ,Crisis Management
+San Diego,2019,4870,2283,1386872,352.3757059,164.6150474,PATH,transitional housing,689118.00 ,Crisis Management
+San Diego,2019,4870,2283,1386872,352.3757059,164.6150474,PATH,rapid re housing,245791.00 ,Crisis Management
+San Marcos,2019,8,8,94833,8.435882024,8.435882024,Alliance for Regional Solutions,emergency shelter,125000,Crisis Management
+San Marcos,2019,8,8,94833,8.435882024,8.435882024,211 San Diego,staff and operations,18473,Crisis Management
+Santee,2019,25,25,60037,41.64098806,41.64098806,Crisis House,homelessness prevention,5620,Prevention
+Santee,2019,25,25,60037,41.64098806,41.64098806,Santee Food Bank,food and nutrition,14050,Crisis Management
+Vista,2019,100,51,98381,101.645643,51.83927791,Operation Hope,emergency shelter,26000,Crisis Management
+Carlsbad,2021,118,75,114160,103.3637001,65.69726699,Interfaith Community Services,outreach,315000.00 ,Crisis Management
+Carlsbad,2021,118,75,114160,103.3637001,65.69726699,Interfaith Community Services,staff and operations,40000.00 ,Crisis Management
+Carlsbad,2021,118,75,114160,103.3637001,65.69726699,Interfaith Community Services,service center,204217.00 ,Crisis Management
+Carlsbad,2021,118,75,114160,103.3637001,65.69726699,Interfaith Community Services,rental assistance,41211.00 ,Prevention
+Carlsbad,2021,118,75,114160,103.3637001,65.69726699,Community Resource Center,rapid re housing,350000.00 ,Diversion
+Carlsbad,2021,118,75,114160,103.3637001,65.69726699,Alliance for Regional Solutions,emergency shelter,25000.00 ,Crisis Management
+Carlsbad,2021,118,75,114160,103.3637001,65.69726699,San Diego Urban Corps,neighborhood revitalization services,82010.00 ,Crisis Management
+Carlsbad,2021,118,75,114160,103.3637001,65.69726699,San Diego Humane Society,homeless services,29825.00 ,Crisis Management
+Carlsbad,2021,118,75,114160,103.3637001,65.69726699,Rocket Johns,restrooms,25000.00 ,Crisis Management
+Carlsbad,2021,118,75,114160,103.3637001,65.69726699,Brother Benno's,housing assistance,10287.00 ,Prevention
+Carlsbad,2021,118,75,114160,103.3637001,65.69726699,Catholic Charities,emergency shelter,17287.00 ,Crisis Management
+Carlsbad,2021,118,75,114160,103.3637001,65.69726699,Legal Aid Society,housing assistance,46488.00 ,Prevention
+Carlsbad,2021,118,75,114160,103.3637001,65.69726699,Women's Resource Center,emergency shelter,10287.00 ,Crisis Management
+Carlsbad,2021,118,75,114160,103.3637001,65.69726699,City of Carlsbad,outreach,1674211.47,Crisis Management
+Carlsbad,2021,118,75,114160,103.3637001,65.69726699,City of Carlsbad,homeless services,389758.25,Crisis Management
+Carlsbad,2021,118,75,114160,103.3637001,65.69726699,City of Carlsbad,motel voucher,12781.16,Crisis Management
+Carlsbad,2021,118,75,114160,103.3637001,65.69726699,Urban Corps,neighborhood revitalization services,17500,Other/Unknown
+Carlsbad,2021,118,75,114160,103.3637001,65.69726699,Rocket Johns,restrooms,100000,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,KIKU GARDENS,rental assistance,1094.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,578.55 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,578.55 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,578.55 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ALPHA PROJECT FOR THE HOMELESS,take back the streets,21406.93 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,KIKU GARDENS,rental assistance,1094.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,INTERFAITH SHELTER NETWORK,emergency shelter,3205.34 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,INTERFAITH SHELTER NETWORK,emergency shelter,4989.36 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rental assistance,12217.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ALPHA PROJECT FOR THE HOMELESS,take back the streets,7891.74 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rapid re housing,1948.00 ,Diversion
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rapid re housing,2959.00 ,Diversion
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rapid re housing,3393.00 ,Diversion
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,KIKU GARDENS,rental assistance,1094.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,553.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,100.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,600.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,55.99 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,KIKU GARDENS,rental assistance,1094.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ALPHA PROJECT FOR THE HOMELESS,take back the streets,5748.49 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,KIKU GARDENS,rental assistance,1094.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rapid re housing,325.00 ,Diversion
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rapid re housing,441.00 ,Diversion
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rental assistance,2071.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rental assistance,1222.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rental assistance,2982.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rental assistance,1222.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rapid re housing,407.00 ,Diversion
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,KIKU GARDENS,rental assistance,1094.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,INTERFAITH SHELTER NETWORK,emergency shelter,4282.06 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rapid re housing,2874.00 ,Diversion
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,KIKU GARDENS,rental assistance,1094.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ALPHA PROJECT FOR THE HOMELESS,take back the streets,64952.84 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,"MCALISTER INSTITUTE FOR TREATMENT & EDUCATION, INC",work for hope,26835.78 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,INTERFAITH SHELTER NETWORK,emergency shelter,2523.24 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,homeless services,55727.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,KIKU GARDENS,rental assistance,1094.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,1078.77 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,125.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,125.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,125.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,261.18 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,386.18 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,435.30 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,435.30 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,435.30 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,2642.96 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,1078.77 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,435.30 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,609.42 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,1.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,125.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,261.18 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,600.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,1654.14 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,600.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,934.45 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,1149.26 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,240.99 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,KIKU GARDENS,rental assistance,1094.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rapid re housing,2119.00 ,Diversion
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rapid re housing,3628.00 ,Diversion
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rapid re housing,2859.00 ,Diversion
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,686.49 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,98.07 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,196.14 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,600.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,1005.18 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,125.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,1.02 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,914.27 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,24.33 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rapid re housing,2770.00 ,Diversion
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,125.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,435.30 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,560.30 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rapid re housing,2770.00 ,Diversion
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,386.18 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,560.30 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,KIKU GARDENS,rental assistance,212.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,KIKU GARDENS,rental assistance,212.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,KIKU GARDENS,rental assistance,212.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,"MARK II, LP",rental assistance,1668.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,KIKU GARDENS,rental assistance,1094.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,578.55 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,578.55 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,578.55 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ALPHA PROJECT FOR THE HOMELESS,take back the streets,21406.93 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,KIKU GARDENS,rental assistance,1094.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,INTERFAITH SHELTER NETWORK,emergency shelter,3205.34 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,INTERFAITH SHELTER NETWORK,emergency shelter,4989.36 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rental assistance,12217.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ALPHA PROJECT FOR THE HOMELESS,take back the streets,7891.74 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rapid re housing,1948.00 ,Diversion
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rapid re housing,2959.00 ,Diversion
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rapid re housing,3393.00 ,Diversion
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,KIKU GARDENS,rental assistance,1094.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,553.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,100.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,600.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,55.99 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,KIKU GARDENS,rental assistance,1094.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ALPHA PROJECT FOR THE HOMELESS,take back the streets,5748.49 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,KIKU GARDENS,rental assistance,1094.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rapid re housing,325.00 ,Diversion
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rapid re housing,441.00 ,Diversion
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rental assistance,2071.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rental assistance,1222.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rental assistance,2982.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rental assistance,1222.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rapid re housing,407.00 ,Diversion
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,KIKU GARDENS,rental assistance,1094.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,INTERFAITH SHELTER NETWORK,emergency shelter,4282.06 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rapid re housing,2874.00 ,Diversion
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,KIKU GARDENS,rental assistance,1094.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ALPHA PROJECT FOR THE HOMELESS,take back the streets,64952.84 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,"MCALISTER INSTITUTE FOR TREATMENT & EDUCATION, INC",work for hope,26835.78 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,INTERFAITH SHELTER NETWORK,emergency shelter,2523.24 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,homeless services,55727.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,KIKU GARDENS,rental assistance,1094.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,1078.77 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,125.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,125.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,125.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,261.18 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,386.18 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,435.30 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,435.30 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,435.30 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,2642.96 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,1078.77 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,435.30 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,609.42 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,1.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,125.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,261.18 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,600.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,1654.14 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,600.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,934.45 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,1149.26 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,240.99 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,KIKU GARDENS,rental assistance,1094.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rapid re housing,2119.00 ,Diversion
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rapid re housing,3628.00 ,Diversion
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rapid re housing,2859.00 ,Diversion
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,686.49 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,98.07 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,196.14 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,600.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,1005.18 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,125.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,1.02 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,914.27 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,24.33 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rapid re housing,2770.00 ,Diversion
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,125.00 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,435.30 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,560.30 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,SBCS CORPORATION,rapid re housing,2770.00 ,Diversion
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,386.18 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,ONE TIME VENDOR,motel voucher,560.30 ,Crisis Management
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,KIKU GARDENS,rental assistance,212.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,KIKU GARDENS,rental assistance,212.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,KIKU GARDENS,rental assistance,212.00 ,Prevention
+Chula Vista,2021,309,206,279170,110.6852455,73.7901637,"MARK II, LP",rental assistance,1668.00 ,Prevention
+Coronado,2021,1,1,18702,5.347021709,5.347021709,St. Vincent de Paul Village,transitional housing,95680.33,Crisis Management
+El Cajon,2021,1308,185,104414,1252.705576,177.1793055,East County Transitional Living Center,emergency shelter,100000.00 ,Crisis Management
+El Cajon,2021,1308,185,104414,1252.705576,177.1793055,Interfaith Community Services,emergency shelter,10893.00 ,Crisis Management
+El Cajon,2021,1308,185,104414,1252.705576,177.1793055,The Salvation Army,family reunification program,20000.00 ,Diversion
+El Cajon,2021,1308,185,104414,1252.705576,177.1793055,East County Transitional Living Center,emergency shelter,100000.00 ,Crisis Management
+El Cajon,2021,1308,185,104414,1252.705576,177.1793055,Interfaith Community Services,emergency shelter,10893.00 ,Crisis Management
+El Cajon,2021,1308,185,104414,1252.705576,177.1793055,The Salvation Army,family reunification program,20000.00 ,Diversion
+Encinitas,2021,113,76,61369,184.1320536,123.8410272,CRC,motel voucher,157125,Crisis Management
+Encinitas,2021,113,76,61369,184.1320536,123.8410272,Community Resource Center,opening doors program,118700,Crisis Management
+Encinitas,2021,113,76,61369,184.1320536,123.8410272,McAlister Institute,staff and operations,162500,Crisis Management
+Encinitas,2021,113,76,61369,184.1320536,123.8410272,Interfaith Community Services,bridge to housing network,30000,Crisis Management
+Encinitas,2021,113,76,61369,184.1320536,123.8410272,Jewish Family Service of San Diego,safe parking,278458.5,Crisis Management
+Encinitas,2021,113,76,61369,184.1320536,123.8410272,Community Resource Center,food and nutrition,24512,Prevention
+Encinitas,2021,113,76,61369,184.1320536,123.8410272,Community Resource Center,food and nutrition,58522,Crisis Management
+Encinitas,2021,113,76,61369,184.1320536,123.8410272,Interfaith Community Services,bridge to housing network,20256,Crisis Management
+Escondido,2021,499,182,150270,332.0689426,121.1153257,Interfaith Community Services,rental assistance,1250000,Prevention
+Escondido,2021,499,182,150270,332.0689426,121.1153257,Interfaith Community Services,outreach,249995,Crisis Management
+Escondido,2021,499,182,150270,332.0689426,121.1153257,Interfaith Community Services,outreach,78335,Crisis Management
+La Mesa,2021,53,35,60360,87.80649437,57.98542081,PATH,outreach,5403.00 ,Crisis Management
+La Mesa,2021,53,35,60360,87.80649437,57.98542081,Department of Housing and Community Development,flexible funds,188809.00 ,Crisis Management
+La Mesa,2021,53,35,60360,87.80649437,57.98542081,Home Start,housing stability services,338000.00 ,Crisis Management
+La Mesa,2021,53,35,60360,87.80649437,57.98542081,Department of Housing and Community Development,flexible funds,188809,Crisis Management
+La Mesa,2021,53,35,60360,87.80649437,57.98542081,Home Start,housing stability services,338000,Crisis Management
+Lemon Grove,2021,31,31,27224,113.8701146,113.8701146,Home Start,outreach,15000,Crisis Management
+Lemon Grove,2021,31,31,27224,113.8701146,113.8701146,Home Start,outreach,4031.865,Crisis Management
+National City,2021,158,149,55550,284.4284428,268.2268227,McAlister Institute for Treatment and Education Inc.,staff and operations,313532,Crisis Management
+National City,2021,158,149,55550,284.4284428,268.2268227,South Bay Community Services,rental assistance,182122.93,Prevention
+Poway,2021,23,23,48078,47.83892841,47.83892841,Jewish Family Services,food and nutrition,168822.545,Crisis Management
+San Diego,2021,4801,2494,1381162,347.6058565,180.5725903,San Diego Youth Services,emergency shelter,72489.22 ,Crisis Management
+San Diego,2021,4801,2494,1381162,347.6058565,180.5725903,Ubran Street Angles,outreach,76623.93 ,Crisis Management
+San Diego,2021,4801,2494,1381162,347.6058565,180.5725903,San Diego LGBT Community Center,outreach,65019.77 ,Crisis Management
+San Diego,2021,4801,2494,1381162,347.6058565,180.5725903,San Diego LGBT Community Center,staff and operations,74400.00 ,Crisis Management
+San Diego,2021,4801,2494,1381162,347.6058565,180.5725903,Urban Street Angels,emergency shelter,228858.95 ,Crisis Management
+San Diego,2021,4801,2494,1381162,347.6058565,180.5725903,PATH,outreach,2375000.00 ,Crisis Management
+San Diego,2021,4801,2494,1381162,347.6058565,180.5725903,San Diego Youth Services,outreach,100251.66 ,Crisis Management
+San Diego,2021,4801,2494,1381162,347.6058565,180.5725903,PATH,service center,733751.00 ,Crisis Management
+San Diego,2021,4801,2494,1381162,347.6058565,180.5725903,Father Joes Village,service center,250000.00 ,Crisis Management
+San Diego,2021,4801,2494,1381162,347.6058565,180.5725903,Father Joes Village,housing assistance,1175285.00 ,Crisis Management
+San Diego,2021,4801,2494,1381162,347.6058565,180.5725903,Jewish Family Service,safe parking,956921.00 ,Crisis Management
+San Diego,2021,4801,2494,1381162,347.6058565,180.5725903,PATH,housing assistance,1594593.00 ,Crisis Management
+San Diego,2021,4801,2494,1381162,347.6058565,180.5725903,Father Joes Village,emergency shelter,9141999.00 ,Crisis Management
+San Diego,2021,4801,2494,1381162,347.6058565,180.5725903,Alpha Project for the Homeless,emergency shelter,6574598.00 ,Crisis Management
+San Diego,2021,4801,2494,1381162,347.6058565,180.5725903,Mental Health Systems Inc.,transitional housing,419750.00 ,Crisis Management
+San Diego,2021,4801,2494,1381162,347.6058565,180.5725903,Alpha Project for the Homeless,emergency shelter,2959661.00 ,Crisis Management
+San Diego,2021,4801,2494,1381162,347.6058565,180.5725903,Salvation Army of San Diego,housing assistance,232309.00 ,Prevention
+San Diego,2021,4801,2494,1381162,347.6058565,180.5725903,YMCA,transitional housing,50000.00 ,Crisis Management
+San Diego,2021,4801,2494,1381162,347.6058565,180.5725903,Think Dignity,transitional housing,182596.00 ,Crisis Management
+San Diego,2021,4801,2494,1381162,347.6058565,180.5725903,Father Joes Village,emergency shelter,314920.63 ,Crisis Management
+San Diego,2021,4801,2494,1381162,347.6058565,180.5725903,Father Joes Village,emergency shelter,755810.00 ,Crisis Management
+San Diego,2021,4801,2494,1381162,347.6058565,180.5725903,Downtown San Diego Partnership,family reunification program,894000.00 ,Diversion
+San Diego,2021,4801,2494,1381162,347.6058565,180.5725903,PATH,transitional housing,689118.00 ,Crisis Management
+San Diego,2021,4801,2494,1381162,347.6058565,180.5725903,PATH,rapid re housing,250000.00 ,Crisis Management
+San Marcos,2021,12,12,94854,12.65102157,12.65102157,Alliance for Regional Solutions,emergency shelter,125000,Crisis Management
+San Marcos,2021,12,12,94854,12.65102157,12.65102157,211 San Diego,staff and operations,54763,Crisis Management
+Santee,2021,147,48,59051,248.9373592,81.28566832,East County Chamber of Commerce,flexible funds,5000,Crisis Management
+Santee,2021,147,48,59051,248.9373592,81.28566832,Crisis House,homeless services,6660,Crisis Management
+Vista,2021,117,76,97766,119.6735061,77.73663646,Interfaith Community Services,emergency shelter,200000,Crisis Management
+Vista,2021,117,76,97766,119.6735061,77.73663646,Alpha Project ,outreach,18334,Crisis Management
+Vista,2021,117,76,97766,119.6735061,77.73663646,North County Lifeline,emergency shelter,18334,Crisis Management
+Vista,2021,117,76,97766,119.6735061,77.73663646,Operation Hope,emergency shelter,32933,Crisis Management
+Vista,2021,117,76,97766,119.6735061,77.73663646,Exodus Recovery,staff and operations,195700,Crisis Management
+Vista,2021,117,76,97766,119.6735061,77.73663646,Elderhelp of San Diego,homeshare program,35000,Prevention
+Carlsbad,2022,103,60,113792,90.51602925,52.72778403,Interfaith Community Services,outreach,315000.00 ,Crisis Management
+Carlsbad,2022,103,60,113792,90.51602925,52.72778403,Interfaith Community Services,staff and operations,40000.00 ,Crisis Management
+Carlsbad,2022,103,60,113792,90.51602925,52.72778403,Interfaith Community Services,service center,204217.00 ,Crisis Management
+Carlsbad,2022,103,60,113792,90.51602925,52.72778403,Interfaith Community Services,rental assistance,23698.00 ,Prevention
+Carlsbad,2022,103,60,113792,90.51602925,52.72778403,Community Resource Center,rapid re housing,350000.00 ,Diversion
+Carlsbad,2022,103,60,113792,90.51602925,52.72778403,Community Resource Center,staff and operations,140000.00 ,Crisis Management
+Carlsbad,2022,103,60,113792,90.51602925,52.72778403,Community Resource Center,rental assistance,18698.00 ,Prevention
+Carlsbad,2022,103,60,113792,90.51602925,52.72778403,Catholic Charities,emergency shelter,155000.00 ,Crisis Management
+Carlsbad,2022,103,60,113792,90.51602925,52.72778403,Catholic Charities,emergency shelter,12698.00 ,Crisis Management
+Carlsbad,2022,103,60,113792,90.51602925,52.72778403,Alliance for Regional Solutions,emergency shelter,25000.00 ,Crisis Management
+Carlsbad,2022,103,60,113792,90.51602925,52.72778403,San Diego Urban Corps,neighborhood revitalization services,90623.50 ,Crisis Management
+Carlsbad,2022,103,60,113792,90.51602925,52.72778403,San Diego Humane Society,homeless services,29825.00 ,Crisis Management
+Carlsbad,2022,103,60,113792,90.51602925,52.72778403,Rocket Johns,restrooms,25000.00 ,Crisis Management
+Carlsbad,2022,103,60,113792,90.51602925,52.72778403,Brother Benno's,housing assistance,10073.00 ,Prevention
+Carlsbad,2022,103,60,113792,90.51602925,52.72778403,Legal Aid Society,housing assistance,23000.00 ,Prevention
+Carlsbad,2022,103,60,113792,90.51602925,52.72778403,Women's Resource Center,emergency shelter,10000.00 ,Crisis Management
+Coronado,2022,1,1,18985,5.267316302,5.267316302,St. Vincent de Paul Village,transitional housing,95680.33,Crisis Management
+El Cajon,2022,1360,203,103558,1313.273721,196.0254157,Home Start,outreach,155000.00 ,Crisis Management
+El Cajon,2022,1360,203,103558,1313.273721,196.0254157,Home Start,outreach,155000.00 ,Crisis Management
+Encinitas,2022,92,73,61085,150.609806,119.5056069,McAlister Institute,staff and operations,162500,Crisis Management
+La Mesa,2022,36,36,60005,59.99500042,59.99500042,Home Start,housing navigation services,574000.00 ,Crisis Management
+San Diego,2022,6500,3285,1378307,471.5930486,238.3358715,San Diego LGBT Community Center,staff and operations,76048.00 ,Crisis Management
+San Diego,2022,6500,3285,1378307,471.5930486,238.3358715,PATH,service center,733751.00 ,Crisis Management
+San Diego,2022,6500,3285,1378307,471.5930486,238.3358715,Father Joes Village,transitional housing,2191144.00 ,Crisis Management
+San Diego,2022,6500,3285,1378307,471.5930486,238.3358715,Alpha Project for the Homeless,emergency shelter,6571548.00 ,Crisis Management
+San Diego,2022,6500,3285,1378307,471.5930486,238.3358715,Father Joes Village,emergency shelter,572900.00 ,Crisis Management
+San Marcos,2022,2,2,94832,2.108992745,2.108992745,Alliance for Regional Solutions,emergency shelter,125000,Crisis Management
+San Marcos,2022,2,2,94832,2.108992745,2.108992745,211 San Diego,staff and operations,56792,Crisis Management
+San Marcos,2022,2,2,94832,2.108992745,2.108992745,Solutions for Change,flexible funds,21347,Crisis Management
+Coronado,2023,0,0,19268,0.0,0.0,St. Vincent de Paul Village,transitional housing,95680.33,Crisis Management

@@ -1,0 +1,71 @@
+---
+title: "SDTEF - Homelessness Program Analysis"
+author: "Brandon Miner"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(dplyr)
+
+dat = read.csv('data/processed/expenditures_and_PIT.csv')
+attach(dat)
+
+head(dat)
+
+# Sample data frame
+
+standardize(col){
+  newcol = (col - mean(col)) / sd(col)
+  return(newcol)
+}
+
+dat_standard = dat |>
+  mutate(across(c(a, b), standardize))
+
+```
+
+```{r linreg}
+model = lm(Unsheltered.PEH ~ City + Year + Population + Program + Amount)
+AIC(model)
+
+model2 = lm(Unsheltered.PEH ~ Population + Program + Amount)
+AIC(model2)
+
+model3 = lm(Unsheltered.PEH ~ City + Year + Program)
+AIC(model3)
+
+model4 = lm(Unsheltered.PEH ~ City + Year + Population + Program)
+AIC(model4)
+
+model5 = lm(Unsheltered.PEH ~ City + Population + Program + Amount)
+AIC(model5)
+
+model6 = lm(Unsheltered.PEH ~ City + Program + Amount)
+AIC(model6)
+
+model7 = lm(Unsheltered.PEH ~ City + Population + Program)
+AIC(model7)
+
+
+# Winner
+summary(model5)
+```
+
+```{r coeff_analysis}
+desc(model5$coefficients^2)
+```
+
+
+
+
+
+
+
+
+
+
+
+

@@ -5,58 +5,76 @@ date: "`r Sys.Date()`"
 output: pdf_document
 ---
 
-```{r setup, include=FALSE}
+```{r setup, echo=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(ggplot2)
 library(dplyr)
+library(ggcorrplot)
 
 dat = read.csv('data/processed/expenditures_and_PIT.csv')
-attach(dat)
 
 head(dat)
 
 # Sample data frame
 
-standardize(col){
-  newcol = (col - mean(col)) / sd(col)
-  return(newcol)
+standardize = function(col){
+  col = (col - mean(col)) / sd(col)
+  return(col)
 }
 
 dat_standard = dat |>
-  mutate(across(c(a, b), standardize))
+  select(City, Year, Unsheltered.PEH, Population, Grantee, Program, Amount, ExpenditureType) |>
+  mutate(across(c(Year, Population, Amount), standardize))
 
+head(dat_standard)
+```
+
+```{r correlation_check}
+corr <- round(cor(
+  dat |>
+    select(Year, Unsheltered.PEH, Population, Amount)
+), 1)
+
+ggcorrplot(corr, hc.order = TRUE, type = "upper", outline.col = "white", lab = TRUE)
 ```
 
 ```{r linreg}
-model = lm(Unsheltered.PEH ~ City + Year + Population + Program + Amount)
+model = lm(Unsheltered.PEH ~ City + Year + Population + Program + Amount + Grantee, data = dat)
 AIC(model)
 
-model2 = lm(Unsheltered.PEH ~ Population + Program + Amount)
-AIC(model2)
+model9 = lm(Unsheltered.PEH ~ Population + Program + Amount + Grantee + City, data = dat)
+AIC(model9)
 
-model3 = lm(Unsheltered.PEH ~ City + Year + Program)
-AIC(model3)
-
-model4 = lm(Unsheltered.PEH ~ City + Year + Population + Program)
-AIC(model4)
-
-model5 = lm(Unsheltered.PEH ~ City + Population + Program + Amount)
-AIC(model5)
-
-model6 = lm(Unsheltered.PEH ~ City + Program + Amount)
-AIC(model6)
-
-model7 = lm(Unsheltered.PEH ~ City + Population + Program)
-AIC(model7)
-
-
+model9b = lm(Unsheltered.PEH ~ Population + Program + Amount + Grantee + City, data = dat_standard)
+#modelX = lm(Unsheltered.PEH ~ Year + Population + Amount + Grantee)
+#AIC(modelX)
 # Winner
-summary(model5)
+summary(model9)
 ```
 
 ```{r coeff_analysis}
-desc(model5$coefficients^2)
+coef_values <- coef(model9)
+
+# Rank coefficients by absolute value, in descending order
+ranked_coef <- sort(coef_values, decreasing = TRUE)
+
+# View the ranked coefficients
+print(formatC(ranked_coef, format = "f", digits = 4))
+
+print("####################################################################################################################")
+
+coef_values <- coef(model9b)
+
+# Rank coefficients by absolute value, in descending order
+ranked_coef <- sort(coef_values, decreasing = TRUE)
+
+# View the ranked coefficients
+print(formatC(ranked_coef, format = "f", digits = 4))
 ```
+
+
+
+
 
 
 

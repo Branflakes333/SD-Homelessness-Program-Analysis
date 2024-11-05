@@ -4,7 +4,7 @@
 
 ### Data Pipeline
 
-| **INPUT DATASET(S)**  | **CODE FILE** | **OUTPUT DATASET(S)** |
+| **INPUT DATASET(S)**  | **DATA CLEANING SCRIPT** | **OUTPUT DATASET(S)** |
 | ------------- | ------------- | ------------- |
 | `CityExpendituresRaw.csv`  | `raw_data_cleaning.ipynb`  | `processed.csv`  |
 | ???.csv  | ???  | `updated_dataset.csv`  |

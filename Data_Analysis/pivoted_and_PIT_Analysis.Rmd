@@ -1,0 +1,138 @@
+---
+title: "SDTEF - Homelessness Program Analysis"
+author: "Brandon Miner"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(dplyr)
+library(ggcorrplot)
+library(glmnet)
+
+dat = read.csv('../data/processed/pivoted_and_PIT.csv')
+
+head(dat)
+
+# Sample data frame
+
+standardize = function(col){
+  col = (col - mean(col)) / sd(col)
+  return(col)
+}
+
+dat_standard = dat |>
+  mutate(across(where(is.numeric) & !all_of("Unsheltered.Per.100.000"), standardize))
+
+```
+
+```{r correlation_check}
+ignored_features = c("PEH.Per.100.000", "Total.PEH", "Unsheltered.PEH", "Population")
+
+corr <- round(cor(
+  dat |>
+    select(-all_of(c(ignored_features,"City")))
+), 1)
+
+ggcorrplot(corr, hc.order = TRUE, type = "upper", outline.col = "white", lab = FALSE)
+```
+
+```{r linreg}
+ignored_features = c("PEH.Per.100.000", "Total.PEH", "Unsheltered.PEH", "Population")
+
+model = lm(Unsheltered.Per.100.000 ~ ., data = dat |> select(-all_of(ignored_features)))
+AIC(model)
+
+modelS = lm(Unsheltered.Per.100.000 ~ ., data = dat_standard |> select(-all_of(ignored_features)))
+AIC(modelS)
+
+```
+
+LOESS Regression is only for a small number of predictors/features ($<5$)
+
+LASSO Regression also makes little sense because we specifically *want* coefficients for all features, namely all the programs, and their coeffs are reduced to zero. Additionally LASSO adds sparsity to our dataset, and our dataset is already sparse. Below is the LASSO model to show it's lack of helpfulness.
+
+SInce we want an "accurate enough" model to identify trends, linear regression is all we need.
+
+```{r LASSOreg}
+# Convert predictors to a matrix
+x <- dat |>
+  select(-all_of(c(ignored_features, "Unsheltered.Per.100.000"))) |>
+  select(where(is.numeric)) |>
+  as.matrix()
+
+xS <- dat_standard |>
+  select(-all_of(c(ignored_features, "Unsheltered.Per.100.000"))) |>
+  select(where(is.numeric)) |>
+  as.matrix()
+
+# Define the response variable
+y <- dat$PEH.Per.100.000  # Replace with your actual response variable
+
+
+set.seed(123)
+cv_model <- cv.glmnet(x, y, alpha = 1)
+cv_modelS <- cv.glmnet(xS, y, alpha = 1)
+
+# Find the best lambda value
+best_lambda <- cv_model$lambda.min
+best_lambdaS <- cv_modelS$lambda.min
+
+# Get the coefficients for the best lambda
+lasso_coefs <- coef(cv_model, s = "lambda.min")
+lasso_coefsS <- coef(cv_modelS, s = "lambda.min")
+
+print(lasso_coefs)
+print(lasso_coefsS)
+```
+
+```{r coeff_analysis}
+coef_values <- coef(model)
+
+# Rank coefficients by absolute value, in descending order
+ranked_coef <- sort(coef_values, decreasing = TRUE)
+
+# View the ranked coefficients
+l = length(ranked_coef)
+print(formatC(ranked_coef, format = "f", digits = 4))
+
+print("##################################################################################################################################################################")
+
+coef_values <- coef(modelS)
+
+# Rank coefficients by absolute value, in descending order
+ranked_coefS <- sort(coef_values, decreasing = TRUE)
+
+# View the ranked coefficients
+print(formatC(ranked_coefS, format = "f", digits = 4))
+```
+
+```{r top_and_bottom_3}
+print("For each additional dollar put towards the below programs, PEH Per 100,000 increases by the listed amount")
+print(formatC(ranked_coef[c(6:8, 27:29)], format = "f", digits = 4))
+print("")
+print("")
+print("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------")
+print("")
+print("")
+print("For each standard deviation increase in the dollar amount spent towards the below programs, PEH Per 100,000 increases by the listed amount")
+print(formatC(ranked_coefS[c(2:4,36:38)], format = "f", digits = 4))
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

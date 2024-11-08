@@ -1,0 +1,326 @@
+---
+title: "Mixed Effect Modeling"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(lme4)
+library(ggplot2)
+library(dplyr)
+library(lmerTest)
+library(pander)
+library(broom)
+library(kableExtra)
+library(car)
+```
+
+# Load Data
+```{r}
+# Regular data
+homelessness_data = read.csv('../data/processed/pivoted_and_PIT.csv')
+
+#Standardized Data
+standardize = function(col){
+  col = (col - mean(col)) / sd(col)
+  return(col)
+}
+
+homelessness_data_standard = homelessness_data |>
+  mutate(across(where(is.numeric) & !all_of("Unsheltered.Per.100.000"), standardize))
+```
+
+# Why Mixed Effects Model
+```{r}
+# Examine variation in Unsheltered.Per.100.000 by City
+ggplot(homelessness_data, aes(x = City, y = Unsheltered.Per.100.000)) +
+  geom_boxplot() +
+  labs(title = "Distribution of Unsheltered Rate per 100,000 by City") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+This graph shows variability based on city, and if we want to focus on effects of programs on unsheltered rather than city influences on those programs, it would make sense to treat city as a random effect
+
+# Implement Models
+```{r}
+ignored_features = c("PEH.Per.100.000", "Total.PEH", "Unsheltered.PEH", "Population")
+
+model <- lmer(Unsheltered.Per.100.000 ~
+              bridge.to.housing.network + emergency.shelter + family.reunification.program +
+              flexible.funds + food.and.nutrition + homeless.services + homelessness.prevention +
+              homeshare.program + housing.assistance + housing.navigation.services +
+              housing.stability.services + motel.voucher + neighborhood.revitalization.services +
+              opening.doors.program + outreach + project.h.o.p.e. + rapid.re.housing +
+              rental.assistance + restrooms + safe.parking + service.center + staff.and.operations +
+              take.back.the.streets + transitional.housing + work.for.hope +
+              (1  | City), data = homelessness_data |> select(-all_of(ignored_features)))
+
+#Standarized model
+modelS <- lmer(Unsheltered.Per.100.000 ~
+              bridge.to.housing.network + emergency.shelter + family.reunification.program +
+              flexible.funds + food.and.nutrition + homeless.services + homelessness.prevention +
+              homeshare.program + housing.assistance + housing.navigation.services +
+              housing.stability.services + motel.voucher + neighborhood.revitalization.services +
+              opening.doors.program + outreach + project.h.o.p.e. + rapid.re.housing +
+              rental.assistance + restrooms + safe.parking + service.center + staff.and.operations +
+              take.back.the.streets + transitional.housing + work.for.hope +
+              (1 | City), data = homelessness_data_standard |> select(-all_of(ignored_features)))
+
+```
+# Addressing Warnings
+```{r}
+vif(model)
+```
+The VIF for work.for.hope is extremely large (4.08e+13) with an infinite value for the scaled GVIF, indicating severe multicollinearity, likely because this variable is almost perfectly collinear with one or more other predictors in the model. This is the source of the "rank deficient" warning, and R removes work.for.hope from the model.
+
+# Visualizing City-Level Random Effects to Justify Mixed-Effects Model Usage
+```{r}
+# Random effects for City
+ranef_city <- ranef(model)$City
+ggplot(ranef_city, aes(x = reorder(row.names(ranef_city), `(Intercept)`), y = `(Intercept)`)) +
+  geom_point() +
+  coord_flip() +
+  labs(title = "City-Level Random Effects", x = "City", y = "Random Intercept Estimate")
+
+```
+
+
+# Model Summaries
+```{r, results='asis'}
+# For PDF
+summarize_model <- function(model) {
+  # Extract the full model summary
+  model_summary <- summary(model)
+
+  # Convert the fixed effects table to a data frame
+  fixed_effects <- as.data.frame(model_summary$coefficients)
+
+  # Sort the fixed effects by Estimate
+  sorted_fixed_effects <- fixed_effects[order(fixed_effects$Estimate), ]
+
+  # Add the C-like format for estimates, but remove the predictor names in the formatted column
+  sorted_fixed_effects$Estimates <- sprintf("%.4f", sorted_fixed_effects$Estimate)
+
+  # Remove the original 'Estimate' column
+  sorted_fixed_effects <- sorted_fixed_effects[, !names(sorted_fixed_effects) %in% c("Estimate")]
+
+  # Rearrange the columns to move 'Estimates' to the front
+  sorted_fixed_effects <- sorted_fixed_effects[, c("Estimates", setdiff(names(sorted_fixed_effects), "Estimates"))]
+
+  # Print the modified summary with formatted estimates
+  sorted_fixed_effects %>%
+    kable("latex", booktabs = TRUE) %>%
+    kable_styling(latex_options = "scale_down")
+}
+
+# For Console
+# summarize_model <- function(model) {
+#   # Extract the full model summary
+#   model_summary <- summary(model)
+#   
+#   # Convert the fixed effects table to a data frame
+#   fixed_effects <- as.data.frame(model_summary$coefficients)
+#   
+#   # Sort the fixed effects by Estimate
+#   sorted_fixed_effects <- fixed_effects[order(fixed_effects$Estimate), ]
+#   
+#   # Add the C-like format for estimates, but remove the predictor names in the formatted column
+#   sorted_fixed_effects$Estimates <- sprintf("%.4f", sorted_fixed_effects$Estimate)
+#   
+#   # Remove the original 'Estimate' column
+#   sorted_fixed_effects <- sorted_fixed_effects[, !names(sorted_fixed_effects) %in% c("Estimate")]
+#   
+#   # Rearrange the columns to move 'Estimates' to the front
+#   sorted_fixed_effects <- sorted_fixed_effects[, c("Estimates", setdiff(names(sorted_fixed_effects), "Estimates"))]
+#   
+#   # Print the modified summary with formatted estimates
+#   print(sorted_fixed_effects)
+# }
+
+summarize_model(model)
+summarize_model(modelS)
+```
+```{r, results='asis', echo=FALSE}
+#for pdf formatting
+cat("\\newpage")
+```
+
+# Plot Estimates
+```{r}
+# Extract fixed effects
+fixed_effects <- as.data.frame(summary(model)$coefficients)
+
+# Remove the intercept row
+fixed_effects_no_intercept <- fixed_effects[rownames(fixed_effects) != "(Intercept)", ]
+
+# Reorder the predictors based on the Estimate
+fixed_effects_no_intercept$Predictor <- factor(
+  rownames(fixed_effects_no_intercept),
+  levels = rownames(fixed_effects_no_intercept)[order(fixed_effects_no_intercept$Estimate)]
+)
+
+# Plot the fixed effects excluding the intercept, sorted by Estimate
+ggplot(fixed_effects_no_intercept, aes(x = Predictor, y = Estimate)) +
+  geom_bar(stat = "identity") +
+  theme(
+    axis.text.x = element_text(angle = 60, hjust = 1, size = 10), # Rotate and adjust the labels
+    axis.title.x = element_text(size = 12),
+    axis.title.y = element_text(size = 12)
+  ) +
+  labs(
+    title = "Fixed Effects Coefficients",
+    x = "Predictors",
+    y = "Estimate"
+  )
+
+# Extract fixed effects
+fixed_effectsS <- as.data.frame(summary(modelS)$coefficients)
+
+# Remove the intercept row
+fixed_effects_no_interceptS <- fixed_effectsS[rownames(fixed_effectsS) != "(Intercept)", ]
+
+# Reorder the predictors based on the Estimate
+fixed_effects_no_interceptS$Predictor <- factor(
+  rownames(fixed_effects_no_interceptS),
+  levels = rownames(fixed_effects_no_interceptS)[order(fixed_effects_no_interceptS$Estimate)]
+)
+
+# Plot the fixed effects excluding the intercept, sorted by Estimate
+ggplot(fixed_effects_no_interceptS, aes(x = Predictor, y = Estimate)) +
+  geom_bar(stat = "identity") +
+  theme(
+    axis.text.x = element_text(angle = 60, hjust = 1, size = 10), # Rotate and adjust the labels
+    axis.title.x = element_text(size = 12),
+    axis.title.y = element_text(size = 12)
+  ) +
+  labs(
+    title = "Fixed Effects Coefficients For Standarzied Model",
+    x = "Predictors",
+    y = "Estimate"
+  )
+
+```
+Flexible funds in both graphs as one of lower 3, and housing stability services in both graphs as upper 3. Lower indicates decrease in unsheltered as funds allocated for program, and upper indicates increase.
+
+# Assessing Residuals and Model Fit
+```{r}
+# Plot residuals
+plot(resid(model))
+qqnorm(resid(model))
+qqline(resid(model))
+```
+Variance in residuals in constant for most part, and no overall patterns which is a good sign. There are some outliers which can be examined
+
+# Results if outliers are removed
+```{r, warning=FALSE}
+# Extract residuals from the model
+residuals <- resid(model)
+
+# Set a threshold for identifying outliers
+# For example, residuals greater than 2 standard deviations from the mean
+threshold <- 2 * sd(residuals)
+
+# Identify the indices of the outliers
+outlier_indices <- which(abs(residuals) > threshold)
+
+# Display the indices and residual values of the outliers
+outliers <- data.frame(Index = outlier_indices, Residual = residuals[outlier_indices])
+print(outliers)
+
+# View the corresponding rows in the original data
+outlier_data <- homelessness_data[outlier_indices, ]
+
+# Remove the identified outlier indices from the dataset
+homelessness_data_no_outliers <- homelessness_data[-c(15, 17, 32, 33), ]
+
+# Re-run the model without outliers
+model_no_outliers <- lmer(Unsheltered.Per.100.000 ~ 
+              bridge.to.housing.network + emergency.shelter + family.reunification.program + 
+              flexible.funds + food.and.nutrition + homeless.services + homelessness.prevention + 
+              homeshare.program + housing.assistance + housing.navigation.services + 
+              housing.stability.services + motel.voucher + neighborhood.revitalization.services + 
+              opening.doors.program + outreach + project.h.o.p.e. + rapid.re.housing + 
+              rental.assistance + restrooms + safe.parking + service.center + staff.and.operations + 
+              take.back.the.streets + transitional.housing + work.for.hope + 
+              (1 | City), 
+              data = homelessness_data_no_outliers |> select(-all_of(ignored_features)))
+
+summarize_model(model_no_outliers)
+
+#Standardized Model with no outliers
+homelessness_data_no_outliers_standard = homelessness_data_no_outliers |>
+  mutate(across(where(is.numeric) & !all_of("Unsheltered.Per.100.000"), standardize))
+
+model_no_outliersS <- lmer(Unsheltered.Per.100.000 ~ 
+              bridge.to.housing.network + emergency.shelter + family.reunification.program + 
+              flexible.funds + food.and.nutrition + homeless.services + homelessness.prevention + 
+              homeshare.program + housing.assistance + housing.navigation.services + 
+              housing.stability.services + motel.voucher + neighborhood.revitalization.services + 
+              opening.doors.program + outreach + project.h.o.p.e. + rapid.re.housing + 
+              rental.assistance + restrooms + safe.parking + service.center + staff.and.operations + 
+              take.back.the.streets + transitional.housing + work.for.hope + 
+              (1 | City), 
+              data = homelessness_data_no_outliers_standard |> select(-all_of(ignored_features)))
+
+summarize_model(model_no_outliersS)
+
+#Graph estmates for models without ouliers
+# Extract fixed effects
+fixed_effects <- as.data.frame(summary(model)$coefficients)
+
+# Remove the intercept row
+fixed_effects_no_intercept <- fixed_effects[rownames(fixed_effects) != "(Intercept)", ]
+
+# Reorder the predictors based on the Estimate
+fixed_effects_no_intercept$Predictor <- factor(
+  rownames(fixed_effects_no_intercept),
+  levels = rownames(fixed_effects_no_intercept)[order(fixed_effects_no_intercept$Estimate)]
+)
+
+# Plot the fixed effects excluding the intercept, sorted by Estimate
+ggplot(fixed_effects_no_intercept, aes(x = Predictor, y = Estimate)) +
+  geom_bar(stat = "identity") +
+  theme(
+    axis.text.x = element_text(angle = 60, hjust = 1, size = 10), # Rotate and adjust the labels
+    axis.title.x = element_text(size = 12),
+    axis.title.y = element_text(size = 12)
+  ) +
+  labs(
+    title = "Fixed Effects Coefficients Without Outliers",
+    x = "Predictors",
+    y = "Estimate"
+  )
+
+# Extract fixed effects
+fixed_effectsS <- as.data.frame(summary(model_no_outliersS)$coefficients)
+
+# Remove the intercept row
+fixed_effects_no_interceptS <- fixed_effectsS[rownames(fixed_effectsS) != "(Intercept)", ]
+
+# Reorder the predictors based on the Estimate
+fixed_effects_no_interceptS$Predictor <- factor(
+  rownames(fixed_effects_no_interceptS),
+  levels = rownames(fixed_effects_no_interceptS)[order(fixed_effects_no_interceptS$Estimate)]
+)
+
+# Plot the fixed effects excluding the intercept, sorted by Estimate
+ggplot(fixed_effects_no_interceptS, aes(x = Predictor, y = Estimate)) +
+  geom_bar(stat = "identity") +
+  theme(
+    axis.text.x = element_text(angle = 60, hjust = 1, size = 10), # Rotate and adjust the labels
+    axis.title.x = element_text(size = 12),
+    axis.title.y = element_text(size = 12)
+  ) +
+  labs(
+    title = "Fixed Effects Coefficients For Standarzied Model Without Outliers",
+    x = "Predictors",
+    y = "Estimate"
+  )
+
+# Residuals and Normality without outliers
+plot(resid(model_no_outliers))
+qqnorm(resid(model_no_outliers))
+qqline(resid(model_no_outliers))
+
+```
+The order of most to least efficient programs remains consistent even when outliers are removed, only the extent to which they affect Unsheltered PEH per 100,000 is affected, though not by much.
+

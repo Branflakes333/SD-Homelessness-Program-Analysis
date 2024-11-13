@@ -186,7 +186,7 @@ summarize_model <- function(model) {
   # Rearrange the columns to move 'Estimates' to the front
   sorted_fixed_effects <- sorted_fixed_effects[, c("Estimates", setdiff(names(sorted_fixed_effects), "Estimates"))]
   
-  # Print the modified summary with formatted estimates
+  # Print the modified summary with formatted estimates using asis_output for proper rendering
   sorted_fixed_effects %>%
     kable("latex", booktabs = TRUE) %>%
     kable_styling(latex_options = "scale_down")
@@ -194,8 +194,11 @@ summarize_model <- function(model) {
 
 summarize_model(model)
 summarize_model(modelS)
+
 ```
-# Plot Estimates
+
+### Plot Estimates
+
 ```{r}
 # Extract fixed effects
 fixed_effects <- as.data.frame(summary(modelS)$coefficients)
@@ -224,16 +227,62 @@ ggplot(fixed_effects_no_intercept, aes(x = Predictor, y = Estimate)) +
   )
 ```
 
-### Assessing Residuals and Model Fit
 
-```{r}
+### Mixed Effects Model Assuptions
+
+#### 1. Linearity
+The is a necessary assumption, but it could be argued that we want "general trend" so linearity is not a horrible solution.
+
+```{r linearity_test}
+plot(model, which = 1)
+```
+
+Technically would want to check against each City and each Year but our dataset is not built for that.
+
+#### 2. Independence of Errors
+Difficult to prove
+
+#### 3. Homoscedasticity
+We must assume that the variance of PEH is constant. This sounds like a t-test 
+
+#### 4. Normality of Random Effects and Residuals
+Assume the amount spent on each program is normally distributed.
+
+```{r Q-Q_rand_eff}
+# Plot residuals
+for (i in 8:ncol(dat_standard)) {
+  # Extract the column name for labeling
+  col_name <- names(dat_standard)[i]
+  
+  # Plot the residuals for the current column
+  qqnorm(dat_standard[[i]], main = paste("Q-Q Plot of", col_name))
+  qqline(dat_standard[[i]])
+}
+
+```
+
+Almost all programs are approximately normal. There are exceptions, but concerns of losing more data is real.
+
+The Q-Q plot shows some concerns due to is not being clearly normal
+
+```{r Q-Q_resid}
 # Plot residuals
 plot(resid(model))
 qqnorm(resid(model))
 qqline(resid(model))
 ```
 
+#### 5. Correct Specification of Random Effects
+We can say with confidence that Year and City are fixed effects while the programs are to be considered random effects.
 
+#### 6. Independence between Fixed Effects and Random Effects
+Cities is a categorical value so it is easily prone to multicollinearity. This is an unfortunate fact that we has t ocheck and address.
+
+#### 7. Random Effects are Correctly Modeled as Random
+Same as .5 for the most part.
+
+#### 8. No Overfitting
+Our data is population data so there is technically no fear of overfitting unless you consider all expenditures/programs prior to 2015.
 
 
 

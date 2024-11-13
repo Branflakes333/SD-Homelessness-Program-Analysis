@@ -15,6 +15,32 @@ library(kableExtra)
 library(car)
 ```
 
+# Goal of Study
+This study examines how different homelessness intervention programs impact the rate of unsheltered people per 100,000.
+
+# What is a Mixed-Effects Model?
+In simple terms, a mixed-effects model helps us study how different factors influence an outcome while taking into account any variations caused by broader groups or categories (like cities or schools). Mixed-effects models are especially helpful when you’re working with data collected across different groups, as they allow us to measure both the overall effect of different programs (like food assistance or emergency shelter) and the unique differences specific to each group (such as city-specific factors that affect homelessness).
+
+Think of it as looking at both the “big picture” effects (which apply generally) and the “smaller picture” effects (specific to each city) all in one model.
+
+# Key Terminology
+
+### Fixed Effects
+
+- **Explanation**: Fixed effects are the variables we’re most interested in studying. These represent the main programs or interventions that we believe have a consistent influence on the outcome across all groups.
+- **Example in Context**: In this study, the fixed effects are different homelessness programs (like housing assistance or outreach services). Each program’s effect is assumed to be the same across all cities, though the size of the effect can vary based on the program itself.
+
+### Random Effects
+
+- **Explanation**: Random effects account for variations that are specific to different groups or contexts. In a mixed-effects model, random effects let us account for how individual groups might influence the outcome differently. Rather than estimating one specific effect per group, the model assumes the influence of each group has a random variation that centers around an average effect.
+- **Example in Context**: Here, “city” is a random effect because we expect that each city will have its own unique conditions impacting homelessness rates. The model assumes cities have varying impacts on homelessness but does not treat each city as a separate study; it groups them to get an “average city effect” with some variation.
+
+### Intercept
+
+- **Explanation**: The intercept in a mixed-effects model represents the average level of the outcome variable (here, homelessness rate) when all predictors (such as the programs) are set to zero.
+- **Example in Context**: The intercept could be thought of as the average homelessness rate in cities without any of these specific programs in place (though in practice, most cities will have at least some services).
+
+
 # Load Data
 ```{r}
 # Regular data
@@ -29,6 +55,9 @@ standardize = function(col){
 homelessness_data_standard = homelessness_data |>
   mutate(across(where(is.numeric) & !all_of("Unsheltered.Per.100.000"), standardize))
 ```
+Standardizing is a process where we adjust the scale of numerical variables so that they have a mean of zero and a standard deviation of one. This helps us compare the impact of different variables more easily, as it puts them all on a similar scale.
+
+In this context, we’re standardizing most of the program-related variables to ensure they’re comparable and to make interpreting their effects on homelessness rates easier. This also helps the model estimate more effectively, especially when variables have different units or ranges (for instance, comparing dollars spent on housing assistance to the number of outreach services provided).
 
 # Why Mixed Effects Model
 ```{r}
@@ -38,7 +67,11 @@ ggplot(homelessness_data, aes(x = City, y = Unsheltered.Per.100.000)) +
   labs(title = "Distribution of Unsheltered Rate per 100,000 by City") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
-This graph shows variability based on city, and if we want to focus on effects of programs on unsheltered rather than city influences on those programs, it would make sense to treat city as a random effect
+This graph shows how much the unsheltered homelessness rate per 100,000 varies from one city to another. We see that each city has unique conditions affecting homelessness, which suggests that these differences need to be accounted for in our analysis. If we ignored city-level variability, we might mistake city-specific factors as effects of the homelessness programs themselves, which could lead to misleading conclusions.
+
+By using a mixed-effects model, we can include city as a random effect. This allows us to control for city-to-city differences and focus more directly on the main question: how the various homelessness programs affect unsheltered rates overall, while recognizing each city’s unique context.
+
+In other words, the mixed-effects model helps us separate the general impact of homelessness programs (fixed effects) from variations that are specific to each city (random effects).
 
 # Implement Models
 ```{r}
@@ -66,13 +99,19 @@ modelS <- lmer(Unsheltered.Per.100.000 ~
               (1 | City), data = homelessness_data_standard |> select(-all_of(ignored_features)))
 
 ```
+Here, we built two versions of a mixed-effects model to assess how various homelessness programs impact unsheltered rates per 100,000 across different cities, treating "city" as a random effect to capture city-specific variations. The first model uses the raw data, while the second uses standardized data to allow for easier comparison of effect sizes among the predictors.
+
 # Addressing Warnings
 ```{r}
 vif(model)
 ```
-The VIF for work.for.hope is extremely large (4.08e+13) with an infinite value for the scaled GVIF, indicating severe multicollinearity, likely because this variable is almost perfectly collinear with one or more other predictors in the model. This is the source of the "rank deficient" warning, and R removes work.for.hope from the model.
+Here, we’re checking for multicollinearity in the model using the Variance Inflation Factor (VIF). Multicollinearity occurs when two or more predictors are highly correlated, making it difficult to isolate the effect of each one. VIF quantifies this by measuring how much the variance of a predictor’s estimated coefficient increases due to correlations with other predictors. 
 
-# Visualizing City-Level Random Effects to Justify Mixed-Effects Model Usage
+A high VIF (above 10, for example) indicates a high level of multicollinearity, while an extremely high VIF (like 4.08e+13 here) shows that the predictor, `work.for.hope`, is almost perfectly collinear with others. This severe multicollinearity causes a "rank deficient" warning, meaning that the model can’t estimate unique effects for all predictors. As a result, R automatically removes `work.for.hope` to allow the model to proceed without redundancy.
+
+The warning regarding different scales for predictor variables is only relevant to the raw data, the standardized data addresses this issue.
+
+# Visualizing City-Level Random Effects
 ```{r}
 # Random effects for City
 ranef_city <- ranef(model)$City
@@ -82,13 +121,11 @@ ggplot(ranef_city, aes(x = reorder(row.names(ranef_city), `(Intercept)`), y = `(
   labs(title = "City-Level Random Effects", x = "City", y = "Random Intercept Estimate")
 
 ```
-
+Each point in the plot represents the random intercept estimate for a city, showing how much the average unsheltered homelessness rate in that city differs from the overall mean rate. Cities like Coronado and San Marcos, for example, have lower-than-average intercepts, suggesting that, after controlling for the program effects, these cities tend to have lower homelessness rates than the average across all cities. Conversely, cities like El Cajon and National City have positive intercept estimates, meaning their rates are generally higher than the overall average. This variation supports the use of a mixed-effects model, as it indicates that city-specific factors significantly impact the outcome and should be accounted for to avoid biased estimates of the program effects.
 
 # Model Summaries
 ```{r, results='asis'}
-# For PDF
 summarize_model <- function(model) {
-  # Extract the full model summary
   model_summary <- summary(model)
 
   # Convert the fixed effects table to a data frame
@@ -112,37 +149,20 @@ summarize_model <- function(model) {
     kable_styling(latex_options = "scale_down")
 }
 
-# For Console
-# summarize_model <- function(model) {
-#   # Extract the full model summary
-#   model_summary <- summary(model)
-#   
-#   # Convert the fixed effects table to a data frame
-#   fixed_effects <- as.data.frame(model_summary$coefficients)
-#   
-#   # Sort the fixed effects by Estimate
-#   sorted_fixed_effects <- fixed_effects[order(fixed_effects$Estimate), ]
-#   
-#   # Add the C-like format for estimates, but remove the predictor names in the formatted column
-#   sorted_fixed_effects$Estimates <- sprintf("%.4f", sorted_fixed_effects$Estimate)
-#   
-#   # Remove the original 'Estimate' column
-#   sorted_fixed_effects <- sorted_fixed_effects[, !names(sorted_fixed_effects) %in% c("Estimate")]
-#   
-#   # Rearrange the columns to move 'Estimates' to the front
-#   sorted_fixed_effects <- sorted_fixed_effects[, c("Estimates", setdiff(names(sorted_fixed_effects), "Estimates"))]
-#   
-#   # Print the modified summary with formatted estimates
-#   print(sorted_fixed_effects)
-# }
-
 summarize_model(model)
-summarize_model(modelS)
-```
-```{r, results='asis', echo=FALSE}
 #for pdf formatting
 cat("\\newpage")
+summarize_model(modelS)
 ```
+## Key Takeaways from the Model’s Results
+
+### Fixed Effects
+Each program’s influence is represented by a fixed-effect coefficient, which shows the estimated effect size of that intervention on homelessness rates. A negative coefficient suggests that the program is associated with a decrease in unsheltered homelessness rates, while a positive coefficient implies an increase.
+
+### Effect Size and Statistical Significance
+The model provides an "Estimate" for each intervention, alongside a "p-value," which indicates the likelihood of the observed effect occurring by chance. Lower p-values (typically below 0.05) suggest a statistically significant impact. For instance, programs like **emergency shelter** may show a significant effect.
+
+However, it’s important to note that because we’re working with a limited amount of data, it can be challenging to achieve statistical significance. This limitation can make it harder for the model to detect small but meaningful effects, which may lead to high p-values even if a program has a real impact. In future studies, additional data could help in more accurately assessing the significance of these effects.
 
 # Plot Estimates
 ```{r}
@@ -199,7 +219,13 @@ ggplot(fixed_effects_no_interceptS, aes(x = Predictor, y = Estimate)) +
   )
 
 ```
-Flexible funds in both graphs as one of lower 3, and housing stability services in both graphs as upper 3. Lower indicates decrease in unsheltered as funds allocated for program, and upper indicates increase.
+## Plot Estimates
+
+The plot of fixed-effect estimates helps us visualize the relative influence of each intervention on homelessness rates. Each bar represents a different program, with the height indicating the estimated effect size (or "Estimate") for that intervention. 
+
+### Interpreting the Plot
+- **Positive Estimates**: Programs with positive bars are associated with an increase in homelessness rates, according to the model. This doesn’t necessarily mean these programs cause homelessness to rise; it could be that they are implemented in areas with greater homelessness needs, or that other factors influencing homelessness were not accounted for in the model.
+- **Negative Estimates**: Programs with negative bars are associated with a reduction in unsheltered homelessness rates. These programs might be more effective at reducing homelessness, or they may operate in areas where homelessness rates are naturally lower. 
 
 # Assessing Residuals and Model Fit
 ```{r}
@@ -208,7 +234,17 @@ plot(resid(model))
 qqnorm(resid(model))
 qqline(resid(model))
 ```
-Variance in residuals in constant for most part, and no overall patterns which is a good sign. There are some outliers which can be examined
+
+Evaluating residuals and model fit helps determine how well the model represents the data and whether its assumptions hold. Residuals are the differences between observed homelessness rates and those predicted by the model. Ideally, residuals should be randomly distributed around zero, indicating that the model’s predictions are unbiased.
+
+### Plotting Residuals
+The residual plot for this model shows that the residuals are fairly evenly scattered around zero, with no obvious patterns, indicating that the model’s assumption of **constant variance** (homoscedasticity) is largely met. This suggests that the model estimates are generally reliable and that there isn’t a systematic error affecting the predictions.
+
+### Normality of Residuals
+The Q-Q plot of residuals shows that most points fall along the line, suggesting that the residuals approximately follow a normal distribution. However, a few points deviate from the line at both extremes, indicating the presence of some outliers. While these deviations are not extreme, they do suggest a slight departure from normality, which could impact the model’s assumptions in certain cases.
+
+### Outliers and Their Influence
+The model identified several observations with large residuals, indicating they are potential outliers. Specifically, cities with the highest and lowest residuals differ significantly from the overall trend, which could mean they have unique characteristics or exceptional homelessness rates not fully accounted for by the model.
 
 # Results if outliers are removed
 ```{r, warning=FALSE}
@@ -323,4 +359,26 @@ qqline(resid(model_no_outliers))
 
 ```
 The order of most to least efficient programs remains consistent even when outliers are removed, only the extent to which they affect Unsheltered PEH per 100,000 is affected, though not by much.
+
+# Conclusion and Results
+
+This analysis assessed the effectiveness of various homelessness intervention programs across different cities, using a mixed-effects model to account for both program impacts (fixed effects) and city-specific influences (random effects). The model allowed us to estimate the general effect of each intervention while recognizing variations between cities, providing an understanding of how different programs contribute to homelessness rates.
+
+### Key Findings
+- **Program Impacts**: The fixed effects estimates reveal that some programs are associated with increases in unsheltered homelessness rates, while others show potential for reductions.
+- **Top 3 Programs Associated with Increased Homelessness Rates**:
+  - **Housing stability services** and **emergency shelter** are among the highest, indicating a strong association with increased homelessness rates. This suggests that these services might be implemented in areas with higher homelessness needs or reflect other unmeasured factors.
+  - **Transitional housing** also has a high positive estimate, which could mean it is commonly deployed in areas with more severe homelessness.
+- **Top 3 Programs Associated with Decreased Homelessness Rates**:
+  - **Flexible funds** shows the largest negative effect, suggesting it is associated with reductions in homelessness rates. This program may provide immediate, adaptable support that helps prevent or mitigate homelessness.
+  - **Rapid rehousing** and **family reunification** also have strong negative estimates, highlighting their potential impact in reducing unsheltered homelessness rates.
+
+
+### Model Fit and Reliability
+Residual analysis shows that the model fits the data reasonably well, with residuals displaying no major patterns and an approximate normal distribution. The presence of some outliers does indicate that certain cities have unique homelessness rates not fully explained by the model, but these do not significantly alter the overall results. This suggests that the model’s conclusions are robust and reliable within the limits of the data available.
+
+### Limitations and Future Directions
+While the model provides valuable insights, it is based on a limited dataset, which affects the statistical power to detect significant effects for all interventions. Some programs with high p-values may still have meaningful impacts that are hard to capture with the current data. Additional data could improve model precision, help validate these findings, and allow for a more thorough understanding of each program's impact.
+
+In summary, this report highlights the complex nature of homelessness interventions and the need for targeted approaches based on local contexts. The analysis offers a foundation for understanding which types of programs may be more effective and underscores the potential for further research to refine these findings. With continued data collection and more nuanced models, policymakers can better allocate resources to the interventions that are likely to make the most impact on reducing homelessness.
 

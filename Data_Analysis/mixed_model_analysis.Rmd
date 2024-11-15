@@ -54,6 +54,14 @@ standardize = function(col){
 
 homelessness_data_standard = homelessness_data |>
   mutate(across(where(is.numeric) & !all_of("Unsheltered.Per.100.000"), standardize))
+
+# Set the directory where images are saved
+output_dir <- "C:/Users/harry/SDCTA/SD-Homelessness-Program-Analysis/Data_Analysis/Visuals/Mixed Effects"
+
+# Make sure the directory exists
+if(!dir.exists(output_dir)) {
+  dir.create(output_dir, recursive = TRUE)
+}
 ```
 Standardizing is a process where we adjust the scale of numerical variables so that they have a mean of zero and a standard deviation of one. This helps us compare the impact of different variables more easily, as it puts them all on a similar scale.
 
@@ -66,6 +74,8 @@ ggplot(homelessness_data, aes(x = City, y = Unsheltered.Per.100.000)) +
   geom_boxplot() +
   labs(title = "Distribution of Unsheltered Rate per 100,000 by City") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+ggsave(filename = file.path(output_dir, "City_Unsheltered_Var.png"))
 ```
 This graph shows how much the unsheltered homelessness rate per 100,000 varies from one city to another. We see that each city has unique conditions affecting homelessness, which suggests that these differences need to be accounted for in our analysis. If we ignored city-level variability, we might mistake city-specific factors as effects of the homelessness programs themselves, which could lead to misleading conclusions.
 
@@ -120,6 +130,7 @@ ggplot(ranef_city, aes(x = reorder(row.names(ranef_city), `(Intercept)`), y = `(
   coord_flip() +
   labs(title = "City-Level Random Effects", x = "City", y = "Random Intercept Estimate")
 
+ggsave(filename = file.path(output_dir, "City_Random_Effects.png"))
 ```
 Each point in the plot represents the random intercept estimate for a city, showing how much the average unsheltered homelessness rate in that city differs from the overall mean rate. Cities like Coronado and San Marcos, for example, have lower-than-average intercepts, suggesting that, after controlling for the program effects, these cities tend to have lower homelessness rates than the average across all cities. Conversely, cities like El Cajon and National City have positive intercept estimates, meaning their rates are generally higher than the overall average. This variation supports the use of a mixed-effects model, as it indicates that city-specific factors significantly impact the outcome and should be accounted for to avoid biased estimates of the program effects.
 
@@ -192,6 +203,8 @@ ggplot(fixed_effects_no_intercept, aes(x = Predictor, y = Estimate)) +
     y = "Estimate"
   )
 
+ggsave(filename = file.path(output_dir, "Estimates_Plot.png"))
+
 # Extract fixed effects
 fixed_effectsS <- as.data.frame(summary(modelS)$coefficients)
 
@@ -218,7 +231,9 @@ ggplot(fixed_effects_no_interceptS, aes(x = Predictor, y = Estimate)) +
     y = "Estimate"
   )
 
+ggsave(filename = file.path(output_dir, "Estimates_Plot_Standardized.png"))
 ```
+
 ## Plot Estimates
 
 The plot of fixed-effect estimates helps us visualize the relative influence of each intervention on homelessness rates. Each bar represents a different program, with the height indicating the estimated effect size (or "Estimate") for that intervention. 
@@ -229,10 +244,17 @@ The plot of fixed-effect estimates helps us visualize the relative influence of 
 
 # Assessing Residuals and Model Fit
 ```{r}
-# Plot residuals
+png(filename = file.path(output_dir, "Residual_Plot.png"))
 plot(resid(model))
+dev.off()
+png(filename = file.path(output_dir, "QQ_Plot.png"))
 qqnorm(resid(model))
 qqline(resid(model))
+dev.off()
+
+plot(resid(model))
+qqnorm(resid(model))  
+qqline(resid(model)) 
 ```
 
 Evaluating residuals and model fit helps determine how well the model represents the data and whether its assumptions hold. Residuals are the differences between observed homelessness rates and those predicted by the model. Ideally, residuals should be randomly distributed around zero, indicating that the model’s predictions are unbiased.
@@ -326,6 +348,8 @@ ggplot(fixed_effects_no_intercept, aes(x = Predictor, y = Estimate)) +
     y = "Estimate"
   )
 
+ggsave(filename = file.path(output_dir, "Estimates_Plot_No_Outliers.png"))
+
 # Extract fixed effects
 fixed_effectsS <- as.data.frame(summary(model_no_outliersS)$coefficients)
 
@@ -352,11 +376,20 @@ ggplot(fixed_effects_no_interceptS, aes(x = Predictor, y = Estimate)) +
     y = "Estimate"
   )
 
+ggsave(filename = file.path(output_dir, "Estimates_Plot_No_Outliers_Standardized.png"))
+
 # Residuals and Normality without outliers
+png(filename = file.path(output_dir, "Residual_Plot_No_Outliers.png"))
 plot(resid(model_no_outliers))
+dev.off()
+png(filename = file.path(output_dir, "QQ_Plot_No_Outliers.png"))
 qqnorm(resid(model_no_outliers))
 qqline(resid(model_no_outliers))
+dev.off()
 
+plot(resid(model_no_outliers))
+qqnorm(resid(model_no_outliers))  
+qqline(resid(model_no_outliers)) 
 ```
 The order of most to least efficient programs remains consistent even when outliers are removed, only the extent to which they affect Unsheltered PEH per 100,000 is affected, though not by much.
 

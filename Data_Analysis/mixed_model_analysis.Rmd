@@ -13,6 +13,7 @@ library(pander)
 library(broom)
 library(kableExtra)
 library(car)
+library(tibble)
 ```
 
 # Goal of Study
@@ -414,4 +415,38 @@ Residual analysis shows that the model fits the data reasonably well, with resid
 While the model provides valuable insights, it is based on a limited dataset, which affects the statistical power to detect significant effects for all interventions. Some programs with high p-values may still have meaningful impacts that are hard to capture with the current data. Additional data could improve model precision, help validate these findings, and allow for a more thorough understanding of each program's impact.
 
 In summary, this report highlights the complex nature of homelessness interventions and the need for targeted approaches based on local contexts. The analysis offers a foundation for understanding which types of programs may be more effective and underscores the potential for further research to refine these findings. With continued data collection and more nuanced models, policymakers can better allocate resources to the interventions that are likely to make the most impact on reducing homelessness.
+
+```{r}
+# Extract summary and convert to a data frame
+model_summary <- as.data.frame(summary(modelS)$coefficients)
+
+# Rename columns for clarity
+colnames(model_summary) <- c("Estimate", "Std.Error", "df", "t.value", "P.value")
+
+# Sort by Estimate and arrange it so Intercept and top/bottom estimates are easier to select
+sorted_summary <- model_summary %>%
+  rownames_to_column(var = "Predictor") %>%
+  arrange(desc(Estimate))
+
+# Select the Intercept, top 3 after Intercept, and bottom 3 estimates
+top_and_bottom <- sorted_summary %>%
+  filter(Predictor == "(Intercept)" | Predictor != "(Intercept)") %>%
+  slice(c(1:4, (n() - 2):n())) %>%  # Intercept, top 3 after Intercept, bottom 3
+  select(Predictor, Estimate)  # Keep only Predictor and Estimate columns
+
+# Add a placeholder row with NA for Estimate
+placeholder <- data.frame(Predictor = "...", Estimate = NA)
+
+# Combine the top, placeholder, and bottom rows
+final_summary <- bind_rows(top_and_bottom[5:7, ])
+
+# Replace NA with "..." in the Estimate column for display purposes
+final_summary$Estimate <- ifelse(is.na(final_summary$Estimate), "...", final_summary$Estimate)
+
+# Create a formatted table for the report
+kable(final_summary, format = "latex", booktabs = TRUE, caption = " 3 Leading programs for homelessness reduction") %>%
+  kable_styling(latex_options = c("scale_down"))
+
+
+```
 
